@@ -4,7 +4,10 @@ const sizes = getSizes()
 
 document.addEventListener(
     "change",
-    (event) => { 
+    (event) => {
+        if (event.target.name === "size") {
+            window.alert(`User chose size ${event.target.value}`)
+        } 
     }
 )
 
