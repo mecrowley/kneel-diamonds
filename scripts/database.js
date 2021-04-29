@@ -62,8 +62,13 @@ export const getOrders = () => {
     return [...database.customOrders]
 }
 
+export const getOrderBuilder = () => {
+    return {...database.orderBuilder}
+}
+
 export const setMetal = (id) => {
     database.orderBuilder.metalId = id
+
 }
 
 export const setSize = (id) => {
