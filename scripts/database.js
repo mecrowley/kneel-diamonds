@@ -26,9 +26,9 @@ const database = {
         { id: 5, metal: "Palladium", price: 1241.0 }
     ],
     forms: [
-        {id: 1, form: "Ring"},
-        {id: 2, form: "Earring"},
-        {id: 3, form: "Necklace"}
+        {id: 1, form: "Ring", priceIncreaseFactor: 1},
+        {id: 2, form: "Earring", priceIncreaseFactor: 2},
+        {id: 3, form: "Necklace", priceIncreaseFactor: 4}
     ],
     customOrders: [
         {

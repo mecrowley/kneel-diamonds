@@ -15,12 +15,8 @@ const buildOrderListItem = (order) => {
 
     if (foundForm === undefined) {
         totalCost = foundMetal.price + foundSize.price + foundStyle.price
-    } else if (foundForm.id === 1) {
-        totalCost = foundMetal.price + foundSize.price + foundStyle.price
-    } else if (foundForm.id === 2) {
-        totalCost = (foundMetal.price + foundSize.price + foundStyle.price) * 2
     } else {
-        totalCost = (foundMetal.price + foundSize.price + foundStyle.price) * 4
+        totalCost = (foundMetal.price + foundSize.price + foundStyle.price) * foundForm.priceIncreaseFactor
     }
 
     const costString = totalCost.toLocaleString("en-US", {
