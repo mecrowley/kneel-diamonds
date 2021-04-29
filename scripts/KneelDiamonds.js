@@ -3,6 +3,7 @@ import { DiamondSizes } from "./DiamondSizes.js";
 import { JewelryStyles } from "./JewelryStyles.js";
 import { Orders } from "./Orders.js";
 import { addCustomOrder } from "./database.js";
+import { JewelryForms } from "./JewelryForms.js";
 
 document.addEventListener(
     "click",
@@ -33,6 +34,9 @@ export const KneelDiamonds = () => {
             </section>
         </article>
 
+        <article class="form__options">
+        ${JewelryForms()}
+        </article>
         <article>
             <button id="orderButton">Create Custom Order</button>
         </article>

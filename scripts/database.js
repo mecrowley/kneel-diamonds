@@ -25,6 +25,11 @@ const database = {
         { id: 4, metal: "Platinum", price: 795.45 },
         { id: 5, metal: "Palladium", price: 1241.0 }
     ],
+    forms: [
+        {id: 1, form: "Ring"},
+        {id: 2, form: "Earring"},
+        {id: 3, form: "Necklace"}
+    ],
     customOrders: [
         {
             id: 1,
@@ -49,6 +54,10 @@ export const getStyles = () => {
     return [...database.styles]
 }
 
+export const getForms = () => {
+    return [...database.forms]
+}
+
 export const getOrders = () => {
     return [...database.customOrders]
 }
@@ -63,6 +72,10 @@ export const setSize = (id) => {
 
 export const setStyle = (id) => {
     database.orderBuilder.styleId = id
+}
+
+export const setForm = (id) => {
+    database.orderBuilder.formId = id
 }
 
 export const addCustomOrder = () => {

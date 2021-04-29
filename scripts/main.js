@@ -1,4 +1,3 @@
-import { getOrders } from "./database.js"
 import { KneelDiamonds } from "./KneelDiamonds.js"
 
 const mainContainer = document.querySelector("#container")
