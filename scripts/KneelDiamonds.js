@@ -10,7 +10,10 @@ document.addEventListener(
     (event) => {
         const itemClicked = event.target
         if (itemClicked.id.startsWith("orderButton")) {
-            addCustomOrder()
+            const customOrder = addCustomOrder()
+            if (!customOrder) {
+                window.alert("Please select an option from each category")
+            }
         }
     }
 )

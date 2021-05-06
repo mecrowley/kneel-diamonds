@@ -11,13 +11,7 @@ const buildOrderListItem = (order) => {
     const foundStyle = styles.find(style => style.id === order.styleId)
     const foundForm = forms.find(form => form.id === order.formId)
 
-    let totalCost;
-
-    if (foundForm === undefined) {
-        totalCost = foundMetal.price + foundSize.price + foundStyle.price
-    } else {
-        totalCost = (foundMetal.price + foundSize.price + foundStyle.price) * foundForm.priceIncreaseFactor
-    }
+    const totalCost = (foundMetal.price + foundSize.price + foundStyle.price) * foundForm.priceIncreaseFactor
 
     const costString = totalCost.toLocaleString("en-US", {
         style: "currency",
@@ -29,10 +23,6 @@ const buildOrderListItem = (order) => {
 }
 
 export const Orders = () => {
-    /*
-        Can you explain why the state variable has to be inside
-        the component function for Orders, but not the others?
-    */
     const orders = getOrders()
 
     let html = "<ul>"
